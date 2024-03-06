@@ -14,6 +14,18 @@
             color: black;
             padding-right: 30px;
             margin-left: 10px;
+            
+            }
+            a:link, a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+
+            a:hover, a:active {
+            background-color: red;
         }
 
         table,th,td{
@@ -23,19 +35,31 @@
             padding-right: 30px;
             padding-left: 30px;
         }
+       
+        .heading1{
+            background-color: blue;
+            color:yellow;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        #heading2{
+            background-color: red;
+            color: blue;
+        }
 
     </style>
 
 </head>
 <body>
-    <h1>Praktikum Hyperlink</h1>
+    <h1 class="heading1">Praktikum Hyperlink</h1>
     <!-- hyperlink -->
     <a href="https://www.detik.com/">Portal Berita Detik</a>
     <!-- target="blank"  utk membuka link di tab baru-->
     <a href="https://www.detik.com/" target="_blank">Protal Kompas</a>
     <a href="belajarImage.html" target="_blank">Pratikum Image </a>
 
-    <h1>Pratikum Table Pertama</Table></h1>
+    <h1 id="heading2">Pratikum Table Pertama</Table></h1>
+    <P class="heading1">Menggunakan rowspan</P>
     <table>
     <!-- BARIS 1-->
        <tr>
@@ -62,6 +86,7 @@
 
 
     <h1> Pratikum Table Kedua</h1>
+    <P class="heading1" id="heading2">Menggunakan colspan</P>
     <table>
         <tr>
             <th>Nama</th>
@@ -78,6 +103,7 @@
     </table>
     
     <h1> Pratikum Table Ketiga</h1>
+    <P class="heading1">Menggunakan rowspan</P>
     <table>
         <tr>
             <th>Nama Lengkap</th>
