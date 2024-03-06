@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link dan Table</title>
+    <style>
+        h1 {
+            background-color: aquamarine;
+            color: black;
+        }
+        a{
+            background-color: aqua;
+            color: black;
+            padding-right: 30px;
+            margin-left: 10px;
+        }
+
+        table,th,td{
+            border-collapse: collapse;   
+            border :1px solid black;
+            text-align: center;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Praktikum Hyperlink</h1>
+    <!-- hyperlink -->
+    <a href="https://www.detik.com/">Portal Berita Detik</a>
+    <!-- target="blank"  utk membuka link di tab baru-->
+    <a href="https://www.detik.com/" target="_blank">Protal Kompas</a>
+    <a href="belajarImage.html" target="_blank">Pratikum Image </a>
+
+    <h1>Pratikum Table Pertama</Table></h1>
+    <table>
+    <!-- BARIS 1-->
+       <tr>
+        <th>Nama</th>
+        <th>Alamat</th>
+        <th>Pekerjaan</th>
+        <th>Kota</th>
+       </tr>
+    <!-- bARIS 2-->
+       <tr>
+        <td>Sujayadi</td>
+        <td>Jl. Kalimantan Timur No.123</td>
+        <td>Pengusaha</td>
+        <td>Singkawang</td>
+       </tr>
+    <!-- bARIS 3-->
+       <tr>
+        <td>Budi</td>
+        <td>Jl. Sudirmat Street No.123</td>
+        <td>Wirausaha</td>
+        <td>Palembang</td>
+       </tr>
+    </table>
+
+
+    <h1> Pratikum Table Kedua</h1>
+    <table>
+        <tr>
+            <th>Nama</th>
+            <!--Colspan membuat kolom menjadi bagi dua / merge center di excel-->
+            <th colspan="2">Alamat</th>
+            <th>Kota</th>
+        </tr>
+        <tr>
+            <td>Sujayandi</td>
+            <td>Jl. Kalimantan Timur</td>
+            <td>Pengusaha</td>
+            <td>Singkawang</td>
+        </tr>
+    </table>
+    
+    <h1> Pratikum Table Ketiga</h1>
+    <table>
+        <tr>
+            <th>Nama Lengkap</th>
+            <td>Sujayadi</td>
+        </tr>
+        <tr>
+            <!--Rowspan membuat baris menjadi bagi dua / merge center di excel-->
+            <th rowspan="2">Alamat</th>
+            <td>Jl. Kalimantan Timur</td>
+        </tr>
+        <tr>
+            <td>Bandung</td>
+        </tr>
+    </table>
+    
+
+</body>
+</html>
