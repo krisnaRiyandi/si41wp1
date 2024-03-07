@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Form</title>
+</head>
+<body>
+    <!-- Membuat Form-->
+    <!--method : POST dan GET-->
+    <!-- Get = metode yang jika kita isi di form maka data yang diisi dapat terlihat di url-->
+    <!-- Post = tidak terlihat di URL-->
+    <form method="post" action="belajarImage.html">
+    Nama Depan : <br/>
+    <!-- value = nilai dari variable namadepan / otomatis muncul di form / diproses oleh sisi server-->
+    <input type="text" name="namadepan" value="budi" size="40"/>
+    <br/> Nama Belakang : <br/>
+    <input type="text" name="namabelakang" value="raharjo"/>
+    <br/> Password : <br/>
+    <input type="password" maxlength="6" name="password"/>
+    <br> Jenis Kelamin </br>
+    <!-- Name harus sama agar bisa dipilih salah satu jika beda maka daoat dipilih dua duanya-->
+    <!-- Checked = default pilihan-->
+    <input type="radio" value="Male" name="gender" checked> Laki-Laki
+    <input type="radio" value="female" name="gender" />Perempuan
+    <br><br>
+    <input type="submit" value="Kirim" />
+    <input type="reset" value="Batal" />
+    
+    </form>
+
+</body>
+</html>
