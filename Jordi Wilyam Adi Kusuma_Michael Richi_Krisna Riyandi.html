@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis PAW</title>
+    <script type="text/javascript">
+        function SubtotalJual(){
+            let jasa = parseInt(document.getElementById('jasa').value);
+            let sparepart = parseInt(document.getElementById('sparepart').value);
+            var subtotal = jasa + sparepart;
+            document.getElementById('subtotal').innerHTML=subtotal;
+            return subtotal;
+        }    
+        function Diskon(){
+            let member = document.getElementById('member').value;
+            let diskon = parseInt(document.getElementById('diskon').value);
+            if (member== "B"){
+                diskon = 0.25*SubtotalJual();
+                document.getElementById('info').innerHTML="Member, Pelanggan Baru";
+            }else if (member =="M"){
+                diskon = 0.2*SubtotalJual();
+                document.getElementById('info').innerHTML="Member Lama";
+            }else if (member== "N"){
+                diskon = 0.1*SubtotalJual();
+                document.getElementById('info').innerHTML="Non Member";
+            }else{
+                diskon = 0*SubtotalJual();
+            }
+            document.getElementById('diskon').innerHTML=diskon;
+            return diskon;
+        }
+        function dpp() {
+            let dpp = SubtotalJual() - Diskon();
+            document.getElementById("dpp").innerHTML = dpp;
+            return dpp;
+        }
+
+        function ppn() {
+            let ppn = dpp() * (11 / 100);
+            document.getElementById("ppn").innerHTML = ppn;
+            return ppn;
+        }
+        function grandtotal() {
+            let grandtotal = dpp() + ppn()
+            document.getElementById("grandtotal").innerHTML = grandtotal;
+        }
+
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+    </script>
+    Nama Pelanggan  : <input type ="text" id="namapelanggan"/>
+    <br>
+    Biaya Jasa      : <input type ="number" id="jasa"/>
+    <br>
+    Biaya Sparepart : <input type="number" id="sparepart"/>
+    <br>
+    Kode Member     : <input type="text" id="member"/>
+
+    <button onclick="SubtotalJual()" type ="submit">cek</button>
+    <p id ="subtotal">Subtotal</p>
+    <button onclick="Diskon()" type ="submit">Cek Diskon</button>
+    <p id ="diskon">Diskon</p>
+    <p id ="info">Info</p>
+    <button onclick="dpp()" type="submit">Cek Dpp</button>
+    <p id="dpp">dpp</p>
+    <button onclick="ppn()" type="submit">Cek Ppn</button>
+    <p id="ppn">ppn</p>
+    <button onclick="grandtotal()" type="submit">GrandTotal</button>
+    <p id="grandtotal">grandtotal</p>
+</body>
+</html>
